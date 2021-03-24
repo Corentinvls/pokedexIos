@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		586C779C260B76B5009AFED6 /* PokemonDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586C779B260B76B5009AFED6 /* PokemonDetailsStoryboard.storyboard */; };
+		5874C8F9260B90B2003FEEAB /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874C8F8260B90B2003FEEAB /* PokemonDetailsViewController.swift */; };
 		C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = C806543E260B48B900526E5E /* DetailsViewController.swift */; };
 		C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065450260B74AA00526E5E /* PokedexViewCell.swift */; };
 		C8065456260B7F2F00526E5E /* PokedexTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065455260B7F2F00526E5E /* PokedexTabsView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		586C779B260B76B5009AFED6 /* PokemonDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PokemonDetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		5874C8F8260B90B2003FEEAB /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
 		C806543E260B48B900526E5E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C8065450260B74AA00526E5E /* PokedexViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewCell.swift; sourceTree = "<group>"; };
 		C8065455260B7F2F00526E5E /* PokedexTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTabsView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				C87546B9260A241D00150CBB /* SceneDelegate.swift */,
 				C87546BB260A241D00150CBB /* MainViewController.swift */,
 				C87546BD260A241D00150CBB /* Main.storyboard */,
+				586C779B260B76B5009AFED6 /* PokemonDetailsStoryboard.storyboard */,
+				5874C8F8260B90B2003FEEAB /* PokemonDetailsViewController.swift */,
 				C87546C0260A241F00150CBB /* Assets.xcassets */,
 				C87546C2260A241F00150CBB /* LaunchScreen.storyboard */,
 				C87546C5260A241F00150CBB /* Info.plist */,
@@ -184,6 +190,7 @@
 			files = (
 				C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */,
 				C87546C4260A241F00150CBB /* LaunchScreen.storyboard in Resources */,
+				586C779C260B76B5009AFED6 /* PokemonDetailsStoryboard.storyboard in Resources */,
 				C87546C1260A241F00150CBB /* Assets.xcassets in Resources */,
 				C87546BF260A241D00150CBB /* Main.storyboard in Resources */,
 			);
@@ -199,6 +206,7 @@
 				C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */,
 				C806545B260B8BC000526E5E /* Extensions.swift in Sources */,
 				C87546BC260A241D00150CBB /* MainViewController.swift in Sources */,
+				5874C8F9260B90B2003FEEAB /* PokemonDetailsViewController.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
 				C8065456260B7F2F00526E5E /* PokedexTabsView.swift in Sources */,
@@ -350,6 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = pokedexIos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = pokedexIos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
