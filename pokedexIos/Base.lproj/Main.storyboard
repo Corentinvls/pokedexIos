@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUp-Re-rfm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -12,7 +12,6 @@
         <!--Pokemon-->
         <scene sceneID="4aO-TQ-cbo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GaT-Nd-AUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="ilE-e6-COK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pokemon" id="rMc-qX-KGx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYc-x4-HgL">
@@ -23,6 +22,7 @@
                         <segue destination="dLT-oA-ylB" kind="relationship" relationship="rootViewController" id="bTO-jF-Qye"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaT-Nd-AUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2843" y="-654"/>
         </scene>
@@ -240,7 +240,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etv-WK-mph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="32"/>
+            <point key="canvasLocation" x="3661" y="-5"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="vXO-Bz-qHP">
@@ -298,7 +298,6 @@
         <!--Items-->
         <scene sceneID="UzX-Pv-HwG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DEz-dO-4nj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="HzM-0r-Fh4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Items" id="DEO-Di-XJb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SHs-Wt-wh2">
@@ -309,13 +308,13 @@
                         <segue destination="UpB-sM-3yb" kind="relationship" relationship="rootViewController" id="aXJ-CU-XOa"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEz-dO-4nj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2810" y="-5"/>
         </scene>
         <!--Games-->
         <scene sceneID="8pf-rE-C3i">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-iu-AIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Rl3-0o-s8j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Games" id="GTi-Nt-EBj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBN-M4-d6E">
@@ -326,6 +325,7 @@
                         <segue destination="2so-Ay-psn" kind="relationship" relationship="rootViewController" id="xWc-2e-1ZI"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-iu-AIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2572" y="713"/>
         </scene>
