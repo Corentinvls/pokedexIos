@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = C806543E260B48B900526E5E /* DetailsViewController.swift */; };
-		C8065443260B4AC200526E5E /* TabItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065442260B4AC200526E5E /* TabItemController.swift */; };
+		C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065450260B74AA00526E5E /* PokedexViewCell.swift */; };
+		C8065456260B7F2F00526E5E /* PokedexTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065455260B7F2F00526E5E /* PokedexTabsView.swift */; };
 		C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B7260A241D00150CBB /* AppDelegate.swift */; };
 		C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B9260A241D00150CBB /* SceneDelegate.swift */; };
 		C87546BC260A241D00150CBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546BB260A241D00150CBB /* MainViewController.swift */; };
@@ -19,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		C806543E260B48B900526E5E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		C8065442260B4AC200526E5E /* TabItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemController.swift; sourceTree = "<group>"; };
+		C8065450260B74AA00526E5E /* PokedexViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewCell.swift; sourceTree = "<group>"; };
+		C8065455260B7F2F00526E5E /* PokedexTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTabsView.swift; sourceTree = "<group>"; };
 		C87546B4260A241D00150CBB /* pokedexIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87546B7260A241D00150CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87546B9260A241D00150CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +70,8 @@
 				C87546C2260A241F00150CBB /* LaunchScreen.storyboard */,
 				C87546C5260A241F00150CBB /* Info.plist */,
 				C806543E260B48B900526E5E /* DetailsViewController.swift */,
-				C8065442260B4AC200526E5E /* TabItemController.swift */,
+				C8065450260B74AA00526E5E /* PokedexViewCell.swift */,
+				C8065455260B7F2F00526E5E /* PokedexTabsView.swift */,
 			);
 			path = pokedexIos;
 			sourceTree = "<group>";
@@ -144,10 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */,
 				C87546BC260A241D00150CBB /* MainViewController.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
-				C8065443260B4AC200526E5E /* TabItemController.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
+				C8065456260B7F2F00526E5E /* PokedexTabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
