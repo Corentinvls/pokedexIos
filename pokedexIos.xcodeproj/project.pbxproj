@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04013C09260A7DFF008F264A /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 04013C08260A7DFF008F264A /* PokemonAPI */; };
+		0471CBC9260B946A007E2FEF /* TypeUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471CBC8260B946A007E2FEF /* TypeUrl.swift */; };
 		04CEAB0E260B40CC001D6807 /* PokemonUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEAB0D260B40CC001D6807 /* PokemonUrl.swift */; };
 		04CEAB16260B4192001D6807 /* PokemonApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEAB15260B4192001D6807 /* PokemonApiHelper.swift */; };
 		C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B7260A241D00150CBB /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0471CBC8260B946A007E2FEF /* TypeUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TypeUrl.swift; path = pokedexIos/Entity/TypeUrl.swift; sourceTree = "<group>"; };
 		04CEAB0D260B40CC001D6807 /* PokemonUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokemonUrl.swift; path = pokedexIos/Entity/PokemonUrl.swift; sourceTree = "<group>"; };
 		04CEAB15260B4192001D6807 /* PokemonApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokemonApiHelper.swift; path = pokedexIos/Helper/PokemonApiHelper.swift; sourceTree = "<group>"; };
 		C87546B4260A241D00150CBB /* pokedexIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +50,7 @@
 			children = (
 				04CEAB0D260B40CC001D6807 /* PokemonUrl.swift */,
 				04CEAB15260B4192001D6807 /* PokemonApiHelper.swift */,
+				0471CBC8260B946A007E2FEF /* TypeUrl.swift */,
 				C87546B6260A241D00150CBB /* pokedexIos */,
 				C87546B5260A241D00150CBB /* Products */,
 			);
@@ -154,6 +157,7 @@
 				04CEAB0E260B40CC001D6807 /* PokemonUrl.swift in Sources */,
 				04CEAB16260B4192001D6807 /* PokemonApiHelper.swift in Sources */,
 				C87546BC260A241D00150CBB /* ViewController.swift in Sources */,
+				0471CBC9260B946A007E2FEF /* TypeUrl.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
 			);

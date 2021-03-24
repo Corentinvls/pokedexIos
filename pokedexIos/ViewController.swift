@@ -21,6 +21,16 @@ class ViewController: UIViewController {
                 }
             }
             
+            PokedexApiHelper.shared.getAllType {
+                (types, error) in
+                for type in types {
+                    PokedexApiHelper.shared.callUrl(url: type.url) {
+                        (data, error) in
+                        print(data["name"]!)
+                    }
+                }
+            }
+            
             /*
              PokedexApiHelper.shared.callUrl(
              url:"https://pokeapi.co/api/v2/pokemon/16/") {
@@ -29,6 +39,5 @@ class ViewController: UIViewController {
              }*/
         }
     }
-    
     
 }
