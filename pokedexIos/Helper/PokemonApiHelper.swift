@@ -32,4 +32,15 @@ class PokedexApiHelper {
             }
         }
     }
+    
+    func test(url:String){
+        let url = URL(string: url)!
+        URLSession.shared.dataTask(with: url)
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            print(data)
+        })
+
+        task.resume()
+    }
+
 }
