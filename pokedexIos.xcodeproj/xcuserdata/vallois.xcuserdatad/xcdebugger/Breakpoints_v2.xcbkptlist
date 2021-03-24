@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2204F2B7-71F0-4DC5-84DB-D31211A4AC46"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedexIos/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273 - f23e25eef255f913"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedexIos.ViewController.__deallocating_deinit"
+                  moduleName = "pokedexIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vallois/Desktop/pokedexIos/pokedexIos/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273 - faf13926f6b4b9a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedexIos.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; pokedexIos.ViewController"
+                  moduleName = "pokedexIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vallois/Desktop/pokedexIos/pokedexIos/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273 - 2af7ebd3795ebde4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedexIos.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; pokedexIos.ViewController"
+                  moduleName = "pokedexIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vallois/Desktop/pokedexIos/pokedexIos/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "386">
+               </Location>
+               <Location
+                  uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273 - b0273333d55d9ef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedexIos.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;pokedexIos.ViewController&gt;"
+                  moduleName = "pokedexIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vallois/Desktop/pokedexIos/pokedexIos/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "A1ED0E98-D8DC-456F-B623-709D23ADB273 - 3424989b69f12b53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedexIos.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;pokedexIos.ViewController&gt;"
+                  moduleName = "pokedexIos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vallois/Desktop/pokedexIos/pokedexIos/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "239">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE775561-2FA2-4E65-AF45-9998031377D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedexIos/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

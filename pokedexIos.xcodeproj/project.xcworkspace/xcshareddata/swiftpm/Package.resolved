@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+<<<<<<< HEAD
         "package": "PokemonAPI",
         "repositoryURL": "https://github.com/kinkofer/PokemonAPI",
         "state": {
           "branch": null,
           "revision": "d0ca44f096fed584be4804abd164d8d5225d408a",
           "version": "6.0.2"
+=======
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage.git",
+        "state": {
+          "branch": null,
+          "revision": "3e8edbeb75227f8542aa87f90240cf0424d6362f",
+          "version": "4.1.0"
+>>>>>>> origin/pokemonInfos
         }
       }
     ]
