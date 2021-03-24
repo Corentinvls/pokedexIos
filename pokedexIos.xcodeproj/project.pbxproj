@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04013C05260A7D66008F264A /* PokedexApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04013C04260A7D66008F264A /* PokedexApiHelper.swift */; };
+		04013C09260A7DFF008F264A /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 04013C08260A7DFF008F264A /* PokemonAPI */; };
 		C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B7260A241D00150CBB /* AppDelegate.swift */; };
 		C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B9260A241D00150CBB /* SceneDelegate.swift */; };
 		C87546BC260A241D00150CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546BB260A241D00150CBB /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04013C04260A7D66008F264A /* PokedexApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokedexApiHelper.swift; path = pokedexIos/Entity/PokedexApiHelper.swift; sourceTree = "<group>"; };
 		C87546B4260A241D00150CBB /* pokedexIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87546B7260A241D00150CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87546B9260A241D00150CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04013C09260A7DFF008F264A /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 		C87546AB260A241D00150CBB = {
 			isa = PBXGroup;
 			children = (
+				04013C04260A7D66008F264A /* PokedexApiHelper.swift */,
 				C87546B6260A241D00150CBB /* pokedexIos */,
 				C87546B5260A241D00150CBB /* Products */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = pokedexIos;
+			packageProductDependencies = (
+				04013C08260A7DFF008F264A /* PokemonAPI */,
+			);
 			productName = pokedexIos;
 			productReference = C87546B4260A241D00150CBB /* pokedexIos.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = C87546AB260A241D00150CBB;
+			packageReferences = (
+				04013C07260A7DFF008F264A /* XCRemoteSwiftPackageReference "PokemonAPI" */,
+			);
 			productRefGroup = C87546B5260A241D00150CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 				C87546BC260A241D00150CBB /* ViewController.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
+				04013C05260A7D66008F264A /* PokedexApiHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04013C07260A7DFF008F264A /* XCRemoteSwiftPackageReference "PokemonAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinkofer/PokemonAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04013C08260A7DFF008F264A /* PokemonAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04013C07260A7DFF008F264A /* XCRemoteSwiftPackageReference "PokemonAPI" */;
+			productName = PokemonAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C87546AC260A241D00150CBB /* Project object */;
 }
