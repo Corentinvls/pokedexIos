@@ -11,8 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        PokedexApiHelper.shared.getAllPokemon { (pokemons, error) in
+            print(pokemons)
+        }
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
 }
