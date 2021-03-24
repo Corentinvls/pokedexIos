@@ -33,6 +33,28 @@ class PokedexApiHelper {
             }
         }
     }
+    /*
+    func paginator(){
+        // Example of calling a paginated web service with a pageLimit, then using the pagedObject to fetch the next page in the list
+        PokemonAPI().utilityService.fetchLanguageList(paginationState: .initial(pageLimit: 5)) { result in
+            switch result {
+            case .success(let pagedLanguages):
+                print("\(pagedLanguages.count!)") // 13
+
+                PokemonAPI().utilityService.fetchLanguageList(paginationState: .continuing(pagedLanguages, .next)) { result in
+                    switch result {
+                    case .success(let pagedLanguagesNext):
+                        print("Page: \(pagedLanguagesNext.currentPage)") // Page: 1
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+ */
     
     func callUrl(
         url:String,
