@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = C806543E260B48B900526E5E /* DetailsViewController.swift */; };
 		C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065450260B74AA00526E5E /* PokedexViewCell.swift */; };
 		C8065456260B7F2F00526E5E /* PokedexTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065455260B7F2F00526E5E /* PokedexTabsView.swift */; };
+		C806545B260B8BC000526E5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806545A260B8BC000526E5E /* Extensions.swift */; };
+		C806545F260B8ED700526E5E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C806545E260B8ED700526E5E /* Alamofire */; };
+		C8065463260B906400526E5E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C8065462260B906400526E5E /* AlamofireImage */; };
 		C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B7260A241D00150CBB /* AppDelegate.swift */; };
 		C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B9260A241D00150CBB /* SceneDelegate.swift */; };
 		C87546BC260A241D00150CBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546BB260A241D00150CBB /* MainViewController.swift */; };
@@ -22,6 +25,7 @@
 		C806543E260B48B900526E5E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C8065450260B74AA00526E5E /* PokedexViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewCell.swift; sourceTree = "<group>"; };
 		C8065455260B7F2F00526E5E /* PokedexTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTabsView.swift; sourceTree = "<group>"; };
+		C806545A260B8BC000526E5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C87546B4260A241D00150CBB /* pokedexIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87546B7260A241D00150CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87546B9260A241D00150CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +41,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C806545F260B8ED700526E5E /* Alamofire in Frameworks */,
+				C8065463260B906400526E5E /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8065459260B8BA500526E5E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C806545A260B8BC000526E5E /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C87546AB260A241D00150CBB = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +76,7 @@
 		C87546B6260A241D00150CBB /* pokedexIos */ = {
 			isa = PBXGroup;
 			children = (
+				C8065459260B8BA500526E5E /* Utils */,
 				C87546B7260A241D00150CBB /* AppDelegate.swift */,
 				C87546B9260A241D00150CBB /* SceneDelegate.swift */,
 				C87546BB260A241D00150CBB /* MainViewController.swift */,
@@ -92,6 +107,10 @@
 			dependencies = (
 			);
 			name = pokedexIos;
+			packageProductDependencies = (
+				C806545E260B8ED700526E5E /* Alamofire */,
+				C8065462260B906400526E5E /* AlamofireImage */,
+			);
 			productName = pokedexIos;
 			productReference = C87546B4260A241D00150CBB /* pokedexIos.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +138,10 @@
 				Base,
 			);
 			mainGroup = C87546AB260A241D00150CBB;
+			packageReferences = (
+				C806545D260B8ED700526E5E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C8065461260B906400526E5E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = C87546B5260A241D00150CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8065451260B74AA00526E5E /* PokedexViewCell.swift in Sources */,
+				C806545B260B8BC000526E5E /* Extensions.swift in Sources */,
 				C87546BC260A241D00150CBB /* MainViewController.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
@@ -351,6 +375,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C806545D260B8ED700526E5E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		C8065461260B906400526E5E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C806545E260B8ED700526E5E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C806545D260B8ED700526E5E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C8065462260B906400526E5E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8065461260B906400526E5E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C87546AC260A241D00150CBB /* Project object */;
 }
