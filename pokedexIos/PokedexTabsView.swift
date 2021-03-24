@@ -10,7 +10,6 @@ import Alamofire
 import AlamofireImage
 
 class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var items = ["1", "2"]
     let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!

@@ -8,8 +8,6 @@
 import UIKit
 
 class PokedexViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
 }
