@@ -1,5 +1,5 @@
 //
-//  TypeUrl.swift
+//  PokemonUrl.swift
 //  pokedexIos
 //
 //  Created by Lexo on 24/03/2021.
