@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8065436260B350300526E5E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065435260B350300526E5E /* CardView.swift */; };
+		C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = C806543E260B48B900526E5E /* DetailsViewController.swift */; };
+		C8065443260B4AC200526E5E /* TabItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8065442260B4AC200526E5E /* TabItemController.swift */; };
 		C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B7260A241D00150CBB /* AppDelegate.swift */; };
 		C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546B9260A241D00150CBB /* SceneDelegate.swift */; };
-		C87546BC260A241D00150CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546BB260A241D00150CBB /* ViewController.swift */; };
+		C87546BC260A241D00150CBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87546BB260A241D00150CBB /* MainViewController.swift */; };
 		C87546BF260A241D00150CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87546BD260A241D00150CBB /* Main.storyboard */; };
 		C87546C1260A241F00150CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87546C0260A241F00150CBB /* Assets.xcassets */; };
 		C87546C4260A241F00150CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87546C2260A241F00150CBB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C8065435260B350300526E5E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C806543E260B48B900526E5E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C8065442260B4AC200526E5E /* TabItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemController.swift; sourceTree = "<group>"; };
 		C87546B4260A241D00150CBB /* pokedexIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87546B7260A241D00150CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87546B9260A241D00150CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C87546BB260A241D00150CBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C87546BB260A241D00150CBB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C87546BE260A241D00150CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C87546C0260A241F00150CBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C87546C3260A241F00150CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,12 +62,13 @@
 			children = (
 				C87546B7260A241D00150CBB /* AppDelegate.swift */,
 				C87546B9260A241D00150CBB /* SceneDelegate.swift */,
-				C87546BB260A241D00150CBB /* ViewController.swift */,
+				C87546BB260A241D00150CBB /* MainViewController.swift */,
 				C87546BD260A241D00150CBB /* Main.storyboard */,
 				C87546C0260A241F00150CBB /* Assets.xcassets */,
 				C87546C2260A241F00150CBB /* LaunchScreen.storyboard */,
 				C87546C5260A241F00150CBB /* Info.plist */,
-				C8065435260B350300526E5E /* CardView.swift */,
+				C806543E260B48B900526E5E /* DetailsViewController.swift */,
+				C8065442260B4AC200526E5E /* TabItemController.swift */,
 			);
 			path = pokedexIos;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C806543F260B48B900526E5E /* DetailsViewController.swift in Resources */,
 				C87546C4260A241F00150CBB /* LaunchScreen.storyboard in Resources */,
 				C87546C1260A241F00150CBB /* Assets.xcassets in Resources */,
 				C87546BF260A241D00150CBB /* Main.storyboard in Resources */,
@@ -140,9 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C87546BC260A241D00150CBB /* ViewController.swift in Sources */,
+				C87546BC260A241D00150CBB /* MainViewController.swift in Sources */,
 				C87546B8260A241D00150CBB /* AppDelegate.swift in Sources */,
-				C8065436260B350300526E5E /* CardView.swift in Sources */,
+				C8065443260B4AC200526E5E /* TabItemController.swift in Sources */,
 				C87546BA260A241D00150CBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
