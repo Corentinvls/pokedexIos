@@ -16,23 +16,24 @@ class PokemonDetailsViewController: UIViewController {
     @IBOutlet weak var pokemonPosition: UILabel!
     @IBOutlet weak var pokemonType: UILabel!
     @IBOutlet weak var pokemonImage: UIImageView!
-    
     @IBOutlet weak var species: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var abilities: UILabel!
     
-    @IBOutlet weak var malePercentage: UILabel!
-    @IBOutlet weak var femalePercentage: UILabel!
     
-    @IBOutlet weak var eggGroups: UILabel!
-    @IBOutlet weak var eggCycle: UILabel!
+    @IBOutlet weak var hpStat: UILabel!
+    @IBOutlet weak var atkStat: UILabel!
+    @IBOutlet weak var defStat: UILabel!
+    @IBOutlet weak var speedStat: UILabel!
+    @IBOutlet weak var spAtkStat: UILabel!
+    @IBOutlet weak var spDefStat: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(pokemon["abilities"])
+        print(pokemon["stats"])
         
         // Do any additional setup after loading the view.
         pokemonName.text = pokemon["name"] as! String
@@ -64,7 +65,6 @@ class PokemonDetailsViewController: UIViewController {
         
         let stats = pokemon["stats"] as? AnyObject
         
-        pokemonType.layer.cornerRadius = 20;
     }
     
     func setFontAndSize()
