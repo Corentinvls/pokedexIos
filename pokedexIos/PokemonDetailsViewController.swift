@@ -34,6 +34,12 @@ class PokemonDetailsViewController: UIViewController {
 print("yo")
         // Do any additional setup after loading the view.
         print(pokemon["name"])
+        pokemonName.text = pokemon["name"] as! String
+        
+        let sprites = pokemon["sprites"] as? AnyObject
+        let urlString = sprites!["front_default"]as! String
+        let url = URL(string:urlString)
+        //pokemonImage.load(url:url!)
         pokemonType.layer.cornerRadius = 20;
     }
     
