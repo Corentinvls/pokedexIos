@@ -91,10 +91,7 @@ class PokeDexTabsView: UICollectionViewController{
         let data = pokemon[indexPath.item]
         print("You selected cell #\(data["name"])!")
         
-        
-        
         let distinationViewController = self.storyboard!.instantiateViewController(withIdentifier: "pokemonDetailsView") as! PokemonDetailsViewController
-
                distinationViewController.pokemon = data
         self.navigationController!.pushViewController(distinationViewController, animated: true)
 

@@ -84,22 +84,6 @@
             </objects>
             <point key="canvasLocation" x="3864" y="-678"/>
         </scene>
-        <!--Test Details-->
-        <scene sceneID="Anb-6q-ozh">
-            <objects>
-                <viewController storyboardIdentifier="tesst" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y4P-t7-oo0" customClass="TestDetails" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WhJ-tJ-sMT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="cEU-Jj-Ls2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cF8-zu-r60"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WTn-TZ-xkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4675" y="-668"/>
-        </scene>
         <!--Pokemon Details View Controller-->
         <scene sceneID="3Q2-Ga-jvy">
             <objects>
@@ -322,9 +306,6 @@
                             <constraint firstItem="5ie-sM-0XC" firstAttribute="leading" secondItem="lcP-6i-KSk" secondAttribute="leading" id="xbU-Oi-BFD"/>
                             <constraint firstItem="lcP-6i-KSk" firstAttribute="baseline" secondItem="3T7-6g-h6n" secondAttribute="baseline" id="z9S-uI-7Vc"/>
                         </constraints>
-                        <connections>
-                            <outlet property="pokemonImage" destination="oQR-zD-BLS" id="NZf-P3-tg4"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="JLt-Xd-9sd"/>
                     <connections>
@@ -334,7 +315,6 @@
                         <outlet property="femalePercentage" destination="2u8-lX-teY" id="Wfp-m9-SSC"/>
                         <outlet property="height" destination="HOp-3k-EJx" id="O0B-gC-0qF"/>
                         <outlet property="malePercentage" destination="lU3-R5-Fok" id="5uh-Bu-iWm"/>
-                        <outlet property="pokemonImage" destination="oQR-zD-BLS" id="yfc-rr-jlN"/>
                         <outlet property="pokemonName" destination="jfi-NK-rdT" id="3cO-fx-Gnd"/>
                         <outlet property="pokemonPosition" destination="6Ni-Y7-APA" id="L9L-Zk-IM2"/>
                         <outlet property="pokemonType" destination="dMS-1g-gaE" id="7UE-FY-PEF"/>

@@ -243,8 +243,8 @@
                         <outlet property="femalePercentage" destination="O1z-xa-yQ3" id="M7S-kY-BDA"/>
                         <outlet property="height" destination="Fog-Ln-YNs" id="JO1-ig-Ttd"/>
                         <outlet property="malePercentage" destination="Tuw-2t-zTf" id="hud-Mj-NLZ"/>
-                        <outlet property="pokemonImage" destination="kTy-N9-CrF" id="Uh9-Hn-IbX"/>
-                        <outlet property="pokemonName" destination="UE4-lj-4YH" id="Zqs-Uh-2cU"/>
+                        <outlet property="pokemonImage" destination="kTy-N9-CrF" id="emd-LN-Pvh"/>
+                        <outlet property="pokemonName" destination="UE4-lj-4YH" id="lah-Fq-tkP"/>
                         <outlet property="pokemonPosition" destination="1kL-rL-OCM" id="TPW-C7-bYV"/>
                         <outlet property="pokemonType" destination="adB-WU-FeT" id="Uks-bq-Kq1"/>
                         <outlet property="species" destination="zpg-v7-Ryd" id="R3I-ei-CPk"/>

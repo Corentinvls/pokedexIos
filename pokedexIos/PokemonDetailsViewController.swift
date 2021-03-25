@@ -31,7 +31,7 @@ class PokemonDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print("yo")
         // Do any additional setup after loading the view.
         print(pokemon["name"])
         pokemonType.layer.cornerRadius = 20;
