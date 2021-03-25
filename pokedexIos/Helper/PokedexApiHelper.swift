@@ -44,7 +44,7 @@ class PokedexApiHelper {
     // return url with pokemonUrl model
     func getAllPokemon(
         completion: @escaping (_ data:[PokemonUrl], _ error:Error?) -> Void) {
-        PokemonAPI().pokemonService.fetchPokemonList(){
+        PokemonAPI().pokemonService.fetchPokemonList(paginationState: .initial(pageLimit: 30)){
             result in
             var pokemonsData: [PokemonUrl] = []
             switch result {
