@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUp-Re-rfm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ilE-e6-COK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nwk-nt-EFh" kind="relationship" relationship="rootViewController" id="ogr-P1-hw2"/>
+                        <segue destination="Q89-IF-sM2" kind="relationship" relationship="rootViewController" id="9xx-5t-k9y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaT-Nd-AUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,68 +27,61 @@
             <point key="canvasLocation" x="2843" y="-654"/>
         </scene>
         <!--Poke Dex Tabs View-->
-        <scene sceneID="cbR-NN-Iia">
+        <scene sceneID="SXV-hd-Nof">
             <objects>
-                <viewController id="nwk-nt-EFh" customClass="PokeDexTabsView" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aLB-Kq-YQK">
+                <collectionViewController id="Q89-IF-sM2" customClass="PokeDexTabsView" customModule="pokedexIos" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U0b-fG-JrH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzi-9N-ijq">
-                                <rect key="frame" x="-0.90614693713723682" y="1.8763194062516959" width="414.00000000000045" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MwI-YC-tiz">
-                                    <size key="itemSize" width="200" height="200"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="XrN-eX-GwG" customClass="PokedexViewCell" customModule="pokedexIos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jof-8g-7O2">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" adjustsFontSizeToFit="NO" id="TgY-PO-OCl">
-                                                    <rect key="frame" x="8" y="25" width="192" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44i-me-4CI">
-                                                    <rect key="frame" x="72" y="72" width="120" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="imageView" destination="44i-me-4CI" id="8t9-VQ-buX"/>
-                                            <outlet property="textLabel" destination="TgY-PO-OCl" id="hlU-16-5S1"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="nwk-nt-EFh" id="xaB-NU-6oJ"/>
-                                    <outlet property="delegate" destination="nwk-nt-EFh" id="M6b-0f-JpT"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JIR-dp-1io"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pPn-GR-Q5n"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zup-DV-h0T">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="XrN-eX-GwG" customClass="PokedexViewCell" customModule="pokedexIos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jof-8g-7O2">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" adjustsFontSizeToFit="NO" id="TgY-PO-OCl">
+                                            <rect key="frame" x="8" y="25" width="192" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44i-me-4CI">
+                                            <rect key="frame" x="72" y="72" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="44i-me-4CI" id="8t9-VQ-buX"/>
+                                    <outlet property="textLabel" destination="TgY-PO-OCl" id="hlU-16-5S1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Q89-IF-sM2" id="vBw-cu-Mhh"/>
+                            <outlet property="delegate" destination="Q89-IF-sM2" id="IvH-Mb-IpS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="BUr-zF-e8s"/>
                     <connections>
-                        <outlet property="pokeCollectionView" destination="Hzi-9N-ijq" id="IgL-5A-RzF"/>
+                        <outlet property="collectionView" destination="U0b-fG-JrH" id="cCW-MX-Ch8"/>
+                        <outlet property="pokeCollectionView" destination="U0b-fG-JrH" id="Dc6-UH-2t1"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W1a-Ph-yzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqW-g2-JW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3948" y="-668"/>
+            <point key="canvasLocation" x="3864" y="-678"/>
         </scene>
         <!--Test Details-->
         <scene sceneID="Anb-6q-ozh">
@@ -105,54 +98,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTn-TZ-xkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4675" y="-668"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="4SA-Lv-VXu">
-            <objects>
-                <tabBarController id="QUp-Re-rfm" customClass="MainViewController" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="1lU-hy-xut"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H2K-jc-ygq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ilE-e6-COK" kind="relationship" relationship="viewControllers" id="5gX-tI-dPa"/>
-                        <segue destination="HzM-0r-Fh4" kind="relationship" relationship="viewControllers" id="hzC-bh-i3I"/>
-                        <segue destination="Rl3-0o-s8j" kind="relationship" relationship="viewControllers" id="9uJ-1J-eam"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Lo-hM-S2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="846" y="126"/>
-        </scene>
-        <!--Items-->
-        <scene sceneID="UzX-Pv-HwG">
-            <objects>
-                <navigationController id="HzM-0r-Fh4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Items" id="DEO-Di-XJb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SHs-Wt-wh2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DEz-dO-4nj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2810" y="-5"/>
-        </scene>
-        <!--Games-->
-        <scene sceneID="8pf-rE-C3i">
-            <objects>
-                <navigationController id="Rl3-0o-s8j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Games" id="GTi-Nt-EBj"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBN-M4-d6E">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-iu-AIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2572" y="713"/>
         </scene>
     </scenes>
     <resources>

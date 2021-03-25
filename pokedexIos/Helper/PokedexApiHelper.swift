@@ -198,6 +198,11 @@ class PokedexApiHelper {
                             
                         }
                     }
+                    pokemonArray.sort(by: { (poke1, poke2) -> Bool in
+                        var id1 =  poke1["id"] as! Int
+                        var id2 =  poke2["id"] as! Int
+                        return id1 < id2
+                    })
                     completion(pokemonArray)
         }.resume()
 
@@ -237,6 +242,17 @@ class PokedexApiHelper {
         
         return returnValue
     }
+    
+    
+    func testAll(completion: @escaping ([AnyObject]) -> ()){
+        PokedexApiHelper.shared.getAllPokemons(limit: 151, offset: 0) { (pokemonsUrl, error) in
+            PokedexApiHelper.shared.fetchPokemon(urlsList: pokemonsUrl) { (pokemon) in
+                completion(pokemon)
+                }
+            }
+        }
+       
+    
     /*
     func paginator(){
         // Example of calling a paginated web service with a pageLimit, then using the pagedObject to fetch the next page in the list
