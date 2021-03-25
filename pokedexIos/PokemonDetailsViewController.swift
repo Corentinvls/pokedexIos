@@ -9,6 +9,7 @@ import UIKit
 
 class PokemonDetailsViewController: UIViewController {
     
+    var pokemon : AnyObject!
 
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonPosition: UILabel!
@@ -37,7 +38,7 @@ class PokemonDetailsViewController: UIViewController {
                 DispatchQueue.main.async {
                     
                     self.pokemonName.text = data.pokemon.name!
-                    self.pokemonPosition.text = "#\(data.pokemon.id!)"
+                    self.pokemonPosition.text = "\(data.pokemon.id!)"
                    
                     let imgUrl = URL(string: (data.pokemon.sprites?.frontDefault)!)!
                     self.pokemonImg.load(url: imgUrl)
