@@ -37,6 +37,30 @@ class PokemonDetailsViewController: UIViewController {
         pokemonType.layer.cornerRadius = 20;
     }
     
+    func setFontAndSize()
+    {
+        
+        self.pokemonName.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.pokemonPosition.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.pokemonType.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.species.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.height.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.weight.font = UIFont(name: "Futura", size: self.species.font.pointSize)
+        
+        self.malePercentage.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
+        
+        self.femalePercentage.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
+        
+        self.eggGroups.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
+        
+        self.eggCycle.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -12,7 +12,7 @@
         <!--Pokemon Details View Controller-->
         <scene sceneID="tRw-fI-0B6">
             <objects>
-                <viewController id="MXb-JY-tMR" customClass="PokemonDetailsViewController" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pokemonDetailsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MXb-JY-tMR" customClass="PokemonDetailsViewController" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4sm-K6-kfg" customClass="ViewController">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
