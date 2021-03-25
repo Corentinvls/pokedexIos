@@ -36,19 +36,19 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! PokedexViewCell
         let poke = self.pokemon[indexPath.row]
-        cell.textLabel.text = poke["name"] as? String// The row value is the
-      let test = poke["sprites"] as? AnyObject// The row value is the
+        cell.textLabel.text = poke["name"] as? String
+        let sprites = poke["sprites"] as? AnyObject
         
-        cell.imageView.load(url:URL(string:test!["front_default"] as! String)!)
+        cell.imageView.load(url:URL(string:sprites!["front_default"] as! String)!)
         cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.backgroundColor =  UIColor.red.withAlphaComponent(0.8)
         cell.backgroundView = UIImageView(image: UIImage(named: "pokeball-icon"))
         cell.layer.shadowOffset = CGSize(width:2.0,height: 4.0)
         cell.layer.shadowRadius = 8.0
-           cell.layer.shadowOpacity = 1.0
-           cell.layer.masksToBounds = false;
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false;
         cell.layer.cornerRadius=20
-           cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
        
         return cell
     }
@@ -77,9 +77,17 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
     
     // MARK: - UICollectionViewDelegate protocol
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        let data = pokemon[indexPath.item]
+        print("You selected cell #\(data["name"])!")
+        let distinationViewController = self.storyboard!.instantiateViewController(withIdentifier: "tesst") as! TestDetails
+
+               distinationViewController.pokemon = data
+        self.navigationController!.pushViewController(distinationViewController, animated: true)
+
     }
+   
     
 }

@@ -9,7 +9,9 @@ import UIKit
 
 class PokemonDetailsViewController: UIViewController {
     
+    var pokemon : AnyObject!
 
+      
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonPosition: UILabel!
     @IBOutlet weak var pokemonType: UILabel!
@@ -31,7 +33,7 @@ class PokemonDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        print(pokemon["name"])
         pokemonType.layer.cornerRadius = 20;
     }
     
