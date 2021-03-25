@@ -31,15 +31,39 @@ class PokemonDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-print("yo")
+        
+        print(pokemon["abilities"])
+        
         // Do any additional setup after loading the view.
-        print(pokemon["name"])
         pokemonName.text = pokemon["name"] as! String
+        let position = pokemon["id"] as AnyObject
+        pokemonPosition.text = "#\(position)"
+        
+        let types = pokemon["types"] as? AnyObject
+        //for type in types as! [[String:Any]] {
+            //print(type["type"].["name"])
+        //}
         
         let sprites = pokemon["sprites"] as? AnyObject
         let urlString = sprites!["front_default"]as! String
-        let url = URL(string:urlString)
-        //pokemonImage.load(url:url!)
+        print (urlString)
+        let url = URL(string: urlString)
+        print(url!)
+        //pokemonImage.load(url: url)
+      
+        
+        let pokeHeight = pokemon["height"] as AnyObject
+        height.text = "\(pokeHeight)"
+        let pokeWeight = pokemon["weight"] as AnyObject
+        weight.text = "\(pokeWeight)"
+        
+        let pokeAbilities = pokemon["abilities"] as? AnyObject
+        //for ability in pokeAbilities as! [[String:Any]] {
+            //print(abilities["ability"].["name"])
+        //}
+        
+        let stats = pokemon["stats"] as? AnyObject
+        
         pokemonType.layer.cornerRadius = 20;
     }
     

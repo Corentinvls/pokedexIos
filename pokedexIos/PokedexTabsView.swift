@@ -89,7 +89,7 @@ class PokeDexTabsView: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         let data = pokemon[indexPath.item]
-        print("You selected cell #\(data["name"])!")
+        //print("You selected cell #\(data["name"])!")
         
         let distinationViewController = self.storyboard!.instantiateViewController(withIdentifier: "pokemonDetailsView") as! PokemonDetailsViewController
                distinationViewController.pokemon = data
