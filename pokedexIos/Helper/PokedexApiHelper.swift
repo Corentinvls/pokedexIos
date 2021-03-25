@@ -44,11 +44,12 @@ class PokedexApiHelper {
     // return url with pokemonUrl model
     func getAllPokemon(
         completion: @escaping (_ data:[PokemonUrl], _ error:Error?) -> Void) {
-        PokemonAPI().pokemonService.fetchPokemonList(paginationState: .initial(pageLimit: 30)){
+        PokemonAPI().pokemonService.fetchPokemonList(){
             result in
             var pokemonsData: [PokemonUrl] = []
             switch result {
             case .success(let pokemons):
+                
                 for pokemon in pokemons.results! {
                     // Ajout de l'url dans le model pokemon url
                     pokemonsData.append(PokemonUrl.init(pokemon: pokemon)!)
@@ -61,6 +62,33 @@ class PokedexApiHelper {
             }
         }
     }
+    func getAllPokemons(
+        limit:Int,
+        offset:Int,
+        completion: @escaping (_ data:[AnyObject], _ error:Error?) -> Void){
+        
+        let url = URL(string:"https://pokeapi.co/api/v2/pokemon/?limit=\(limit)&offset=\(offset)")
+        var pkmUrls=[AnyObject]()
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if let error = error {
+            print("Failed to fetch data with error: ", error.localizedDescription)
+            return
+            }
+    
+            guard let data = data else { return }
+            do {
+               let found = try JSONSerialization.jsonObject(with: data, options: []) as AnyObject
+                let result=(found["results"])! as! [AnyObject]
+                pkmUrls.append(contentsOf: result)
+            
+                
+               } catch {
+                   print("Error took place: \(error.localizedDescription).")
+               }
+            completion(pkmUrls, nil)
+}.resume()
+    }
+    
     
     func getAllType(
         completion: @escaping (_ data:[TypeUrl], _ error:Error?) -> Void) {
@@ -142,21 +170,24 @@ class PokedexApiHelper {
             completion(pokemonArray)
         }
     }*/
-    func fetchPokemon(completion: @escaping ([AnyObject]) -> ()) {
+    func fetchPokemon(
+        urlsList:[AnyObject],
+        completion: @escaping ([AnyObject]) -> ()) {
         var pokemonArray = [AnyObject]()
-        self.getAllPokemon {
-            (pokemons, error) in
-            for pokemon in pokemons {
-                guard let url = URL(string: pokemon.url) else { return }
+      
+        for pokemon in urlsList {
+                guard let url = URL(string: pokemon["url"] as! String) else { return }
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
-                
+                    if let httpResponse = response as? HTTPURLResponse {
+                        if(httpResponse.statusCode != 404){
+
                     if let error = error {
                     print("Failed to fetch data with error: ", error.localizedDescription)
                     return
                     }
             
                     guard let data = data else { return }
-                    var pkmPokemon: AnyObject?
+                    var pkmPokemon: AnyObject!
                     do {
                         pkmPokemon = try JSONSerialization.jsonObject(with: data, options: []) as AnyObject 
                         
@@ -164,12 +195,15 @@ class PokedexApiHelper {
                            print("Error took place: \(error.localizedDescription).")
                        }
                     pokemonArray.append(pkmPokemon!)
+                            
+                        }
+                    }
                     completion(pokemonArray)
         }.resume()
 
     }
          
-    }
+    
 }
             
     func getOneGameVersionByName(

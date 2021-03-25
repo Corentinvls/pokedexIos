@@ -13,12 +13,14 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var pokemon = [AnyObject]()
     var images = [AnyObject]()
+    var urlList = [AnyObject]()
+    var offset = 0
     // MARK: - UICollectionViewDataSource protocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTwoColumns()
-        fetchPokemon()
+       fetchUrl()
        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -53,12 +55,26 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
         return cell
     }
     
-   
-    func fetchPokemon() {
-        PokedexApiHelper.shared.fetchPokemon { (pokemon) in
+    func fetchUrl() {
+       
+        PokedexApiHelper.shared.getAllPokemons(limit: 10, offset: self.offset) { (pokemonsUrl, error) in
             DispatchQueue.main.async {
-                self.pokemon = pokemon
+                self.urlList.append(contentsOf: pokemonsUrl)
+                self.fetchPokemon()
+            }
+        }
+    }
+      
+    func fetchPokemon() {
+        PokedexApiHelper.shared.fetchPokemon(urlsList: self.urlList) { (pokemon) in
+            DispatchQueue.main.async {
+                self.pokemon=pokemon
                 self.pokeCollectionView.reloadData()
+                if(self.offset<20){
+                    self.offset = self.offset+10
+                    self.fetchUrl()
+                    
+                }
             }
         }
     }
@@ -66,7 +82,7 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
         if let layout = pokeCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
                 layout.minimumLineSpacing = 10
                 layout.minimumInteritemSpacing = 10
-            
+        
                 layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
                 let size = CGSize(width:(pokeCollectionView!.bounds.width-30)/2, height: 180)
                 layout.itemSize = size
