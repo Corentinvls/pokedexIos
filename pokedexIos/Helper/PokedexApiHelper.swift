@@ -123,6 +123,24 @@ class PokedexApiHelper {
         }
     }
     
+    func getOnePokemonById(
+        pokeId:Int,
+        completion: @escaping (_ data:[Pokemon], _ error:Error?) -> Void) {
+        PokemonAPI().pokemonService.fetchPokemon(pokeId){
+            result in
+            var pokemonData: [Pokemon] = []
+            switch result {
+            case .success(let pokemon):
+                pokemonData.append(Pokemon.init(pokemon: pokemon)!)
+                completion(pokemonData,nil)
+                break
+            case .failure(let error):
+                completion([],error)
+                break
+            }
+        }
+    }
+    
     func getOneGameVersionByName(
         versionName:String,
         completion: @escaping (_ data:[GameVersion], _ error:Error?) -> Void) {
@@ -141,6 +159,7 @@ class PokedexApiHelper {
             }
         }
     }
+    
     /*
     func paginator(){
         // Example of calling a paginated web service with a pageLimit, then using the pagedObject to fetch the next page in the list

@@ -19,15 +19,15 @@ class MainViewController: UITabBarController {
             for pokemon in pokemons {
                 PokedexApiHelper.shared.callUrl(url: pokemon.url) {
                     (data, error) in
-                    // do something
                 }
             }
         }
+        
         PokedexApiHelper.shared.getOnePokemonByName(pokeName: "bulbasaur") { (datas, error) in
             for data in datas {
-                print(data.pokemon.name!)
             }
         }
+        
     }
 
 
