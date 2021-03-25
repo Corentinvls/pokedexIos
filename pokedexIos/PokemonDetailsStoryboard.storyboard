@@ -267,7 +267,7 @@
         <!--Base Stats-->
         <scene sceneID="RNk-4E-CyS">
             <objects>
-                <viewController id="KMe-EI-XKs" sceneMemberID="viewController">
+                <viewController id="KMe-EI-XKs" customClass="PokemonStatsViewController" customModule="pokedexIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tuq-m1-OlE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,10 +472,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Base Stats" image="number.circle" catalog="system" id="tHa-UI-aRv"/>
                     <navigationItem key="navigationItem" id="LBp-i8-Tac"/>
+                    <connections>
+                        <outlet property="atkStats" destination="xqd-NB-CMG" id="aoB-OD-HCU"/>
+                        <outlet property="defStats" destination="NTV-IK-4BT" id="Tnt-Yn-AfR"/>
+                        <outlet property="hpStats" destination="zDX-yE-CiF" id="Wbk-du-E2L"/>
+                        <outlet property="spAtkStats" destination="rDg-zh-d74" id="hIP-0F-avw"/>
+                        <outlet property="spDefStats" destination="N87-HY-dKK" id="Dp5-Mw-2kA"/>
+                        <outlet property="speedStats" destination="EbR-8e-Pw0" id="TEl-DB-6Pz"/>
+                        <outlet property="totalStats" destination="VNt-73-3GL" id="3cf-FN-vYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teM-4e-Uix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="-697"/>
+            <point key="canvasLocation" x="-2277" y="-697"/>
         </scene>
         <!--Moves-->
         <scene sceneID="jY1-j1-Q0Z">

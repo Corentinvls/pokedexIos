@@ -38,12 +38,10 @@ class PokemonDetailsViewController: UIViewController {
                     
                     self.pokemonName.text = data.pokemon.name!
                     self.pokemonPosition.text = "#\(data.pokemon.id!)"
-                    self.pokemonType.text = "\(data.pokemon.types!)"
-                
-
+                   
                     let imgUrl = URL(string: (data.pokemon.sprites?.frontDefault)!)!
                     self.pokemonImg.load(url: imgUrl)
-                    
+                
                    
                     self.height.text = "\(data.pokemon.height!)";
                     self.weight.text = "\(data.pokemon.weight!)";
