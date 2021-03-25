@@ -11,7 +11,7 @@ import PokemonAPI
 class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var pokeCollectionView: UICollectionView!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var pokemon = [PKMPokemon]()
+    var pokemon = [AnyObject]()
     var images = [AnyObject]()
     // MARK: - UICollectionViewDataSource protocol
     
@@ -35,12 +35,20 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! PokedexViewCell
+        let poke = self.pokemon[indexPath.row]
+        cell.textLabel.text = poke["name"] as? String// The row value is the
+      let test = poke["sprites"] as? AnyObject// The row value is the
+        
+        cell.imageView.load(url:URL(string:test!["front_default"] as! String)!)
+        cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.backgroundColor =  UIColor.red.withAlphaComponent(0.8)
         cell.backgroundView = UIImageView(image: UIImage(named: "pokeball-icon"))
-        
-        cell.textLabel.text = self.pokemon[indexPath.row].name // The row value is the
-        cell.imageView.load(url:URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!)
-    
+        cell.layer.shadowOffset = CGSize(width:2.0,height: 4.0)
+        cell.layer.shadowRadius = 8.0
+           cell.layer.shadowOpacity = 1.0
+           cell.layer.masksToBounds = false;
+        cell.layer.cornerRadius=20
+           cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
        
         return cell
     }
@@ -58,6 +66,7 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
         if let layout = pokeCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
                 layout.minimumLineSpacing = 10
                 layout.minimumInteritemSpacing = 10
+            
                 layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
                 let size = CGSize(width:(pokeCollectionView!.bounds.width-30)/2, height: 180)
                 layout.itemSize = size

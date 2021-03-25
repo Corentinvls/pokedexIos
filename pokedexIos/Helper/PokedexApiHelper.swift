@@ -122,12 +122,14 @@ class PokedexApiHelper {
             }
         }
     }
-    func fetchPokemon(completion: @escaping ([PKMPokemon]) -> ()) {
+  /*  func fetchPokemon(completion: @escaping ([PKMPokemon]) -> ()) {
         var pokemonArray = [PKMPokemon]()
         self.getAllPokemon {
             (pokemons, error) in
             for pokemon in pokemons {
+               
                     let encodedPokemon = NSData(contentsOf: URL(string: pokemon.url)!)
+    
                     var pkmPokemon: PKMPokemon?
                     do {
                         pkmPokemon = try JSONDecoder().decode(PKMPokemon.self, from: encodedPokemon! as Data)
@@ -139,8 +141,37 @@ class PokedexApiHelper {
                 }
             completion(pokemonArray)
         }
+    }*/
+    func fetchPokemon(completion: @escaping ([AnyObject]) -> ()) {
+        var pokemonArray = [AnyObject]()
+        self.getAllPokemon {
+            (pokemons, error) in
+            for pokemon in pokemons {
+                guard let url = URL(string: pokemon.url) else { return }
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                
+                    if let error = error {
+                    print("Failed to fetch data with error: ", error.localizedDescription)
+                    return
+                    }
+            
+                    guard let data = data else { return }
+                    var pkmPokemon: AnyObject?
+                    do {
+                        pkmPokemon = try JSONSerialization.jsonObject(with: data, options: []) as AnyObject 
+                        
+                       } catch {
+                           print("Error took place: \(error.localizedDescription).")
+                       }
+                    pokemonArray.append(pkmPokemon!)
+                    completion(pokemonArray)
+        }.resume()
+
     }
-    
+         
+    }
+}
+            
     func getOneGameVersionByName(
         versionName:String,
         completion: @escaping (_ data:[GameVersion], _ error:Error?) -> Void) {
