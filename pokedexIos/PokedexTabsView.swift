@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import PokemonAPI
 
 class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var pokeCollectionView: UICollectionView!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = [PKMPokemon]()
+    var items = [String]()
+    var pokemon = [TestPokemon]()
     var images = [AnyObject]()
     // MARK: - UICollectionViewDataSource protocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTwoColumns()
-        fetchData()
+        fetchPokemon()
        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -36,15 +38,15 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! PokedexViewCell
         cell.backgroundColor =  UIColor.red.withAlphaComponent(0.8)
         cell.backgroundView = UIImageView(image: UIImage(named: "pokeball-icon"))
-        cell.bounds.
-        cell.textLabel.text = self.items[indexPath.row] // The row value is the
+        
+        cell.textLabel.text = self.pokemon[indexPath.row].name // The row value is the
         cell.imageView.load(url:URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")!)
     
        
         return cell
     }
     
-    func fetchData() {
+    /*func fetchData() {
         PokedexApiHelper.shared.getAllPokemon {
             (pokemons, error) in
             for pokemon in pokemons {
@@ -58,6 +60,14 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
             }
         }
       
+    }*/
+    func fetchPokemon() {
+        PokedexApiHelper.shared.fetchPokemon { (pokemon) in
+            DispatchQueue.main.async {
+                self.pokemon = pokemon
+                self.pokeCollectionView.reloadData()
+            }
+        }
     }
     func setTwoColumns() {
         if let layout = pokeCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
