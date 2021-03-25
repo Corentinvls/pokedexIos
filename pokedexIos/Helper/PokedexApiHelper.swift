@@ -107,13 +107,13 @@ class PokedexApiHelper {
     
     func getOnePokemonByName(
         pokeName:String,
-        completion: @escaping (_ data:[Pokemon], _ error:Error?) -> Void) {
+        completion: @escaping (_ data:[PKMPokemon], _ error:Error?) -> Void) {
         PokemonAPI().pokemonService.fetchPokemon(pokeName){
             result in
-            var pokemonData: [Pokemon] = []
+            var pokemonData: [PKMPokemon] = []
             switch result {
             case .success(let pokemon):
-                pokemonData.append(Pokemon.init(pokemon: pokemon)!)
+                pokemonData.append(pokemon)
                 completion(pokemonData,nil)
                 break
             case .failure(let error):
@@ -122,20 +122,22 @@ class PokedexApiHelper {
             }
         }
     }
-    func fetchPokemon(completion: @escaping ([Pokemon]) -> ()) {
-        var pokemonArray = [Pokemon]()
+    func fetchPokemon(completion: @escaping ([PKMPokemon]) -> ()) {
+        var pokemonArray = [PKMPokemon]()
         self.getAllPokemon {
             (pokemons, error) in
             for pokemon in pokemons {
-                self.callUrl(url: pokemon.url) {
-                    (data, error) in
-                
-                    pokemonArray.append(Pokemon.init(pokemon: PKMPokemon.decode(data)))
-                    completion(pokemonArray)
-                }
-               
-            }
+                    let encodedPokemon = NSData(contentsOf: URL(string: pokemon.url)!)
+                    var pkmPokemon: PKMPokemon?
+                    do {
+                        pkmPokemon = try JSONDecoder().decode(PKMPokemon.self, from: encodedPokemon! as Data)
+                       } catch {
+                           print("Error took place: \(error.localizedDescription).")
+                       }
             
+                    pokemonArray.append(pkmPokemon!)
+                }
+            completion(pokemonArray)
         }
     }
     
@@ -159,7 +161,17 @@ class PokedexApiHelper {
     }
     
     
-   
+    func parseJSON(data: Data) -> PKMPokemon? {
+        
+        var returnValue: PKMPokemon?
+        do {
+            returnValue = try JSONDecoder().decode(PKMPokemon.self, from: data)
+        } catch {
+            print("Error took place: \(error.localizedDescription).")
+        }
+        
+        return returnValue
+    }
     /*
     func paginator(){
         // Example of calling a paginated web service with a pageLimit, then using the pagedObject to fetch the next page in the list

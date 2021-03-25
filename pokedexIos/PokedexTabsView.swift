@@ -11,8 +11,7 @@ import PokemonAPI
 class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var pokeCollectionView: UICollectionView!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = [String]()
-    var pokemon = [TestPokemon]()
+    var pokemon = [PKMPokemon]()
     var images = [AnyObject]()
     // MARK: - UICollectionViewDataSource protocol
     
@@ -28,7 +27,7 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
     }
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView,  numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.pokemon.count
     }
    
     
@@ -46,21 +45,7 @@ class PokeDexTabsView: UIViewController, UICollectionViewDataSource, UICollectio
         return cell
     }
     
-    /*func fetchData() {
-        PokedexApiHelper.shared.getAllPokemon {
-            (pokemons, error) in
-            for pokemon in pokemons {
-                PokedexApiHelper.shared.callUrl(url: pokemon.url) {
-                    (data, error) in
-                    self.items.append(data["name"]as! String)
-                    DispatchQueue.main.async {
-                        self.pokeCollectionView.reloadData()
-                    }
-                }
-            }
-        }
-      
-    }*/
+   
     func fetchPokemon() {
         PokedexApiHelper.shared.fetchPokemon { (pokemon) in
             DispatchQueue.main.async {
