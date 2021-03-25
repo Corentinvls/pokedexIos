@@ -12,10 +12,7 @@ class PokeDexTabsView: UICollectionViewController{
     @IBOutlet weak var pokeCollectionView: UICollectionView!
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var pokemon = [AnyObject]()
-    var images = [AnyObject]()
-    var urlList = [AnyObject]()
-    let maxOffset = 151
-    var offset = 0
+    
     // MARK: - UICollectionViewDataSource protocol
     
     override func viewDidLoad() {
@@ -40,9 +37,7 @@ class PokeDexTabsView: UICollectionViewController{
         cell.textLabel.text = poke["name"] as? String
         let sprites = poke["sprites"] as? AnyObject
         
-            cell.imageView.load(url:URL(string:sprites!["front_default"] as! String)!)
-       
-        
+        cell.imageView.load(url:URL(string:sprites!["front_default"] as! String)!)
         cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.backgroundColor =  UIColor.red.withAlphaComponent(0.8)
         cell.backgroundView = UIImageView(image: UIImage(named: "pokeball-icon"))
@@ -56,17 +51,7 @@ class PokeDexTabsView: UICollectionViewController{
         return cell
     }
     
-    func fetchUrl() {
-       
-        PokedexApiHelper.shared.getAllPokemons(limit: 151, offset: self.offset) { (pokemonsUrl, error) in
-            DispatchQueue.main.async {
-                self.urlList.append(contentsOf: pokemonsUrl)
-                self.fetchPokemon()
-                
-            }
-        }
-    }
-      
+   
     func fetchPokemon() {
         PokedexApiHelper.shared.testAll { (pokemon) in
             DispatchQueue.main.async {
