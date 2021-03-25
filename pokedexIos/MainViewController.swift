@@ -23,6 +23,7 @@ class MainViewController: UITabBarController {
                 }
             }
         }
+        
         PokedexApiHelper.shared.getOnePokemonByName(pokeName: "bulbasaur") { (datas, error) in
             for data in datas {
                 print(data.pokemon.name!)

@@ -13,7 +13,7 @@ class PokemonDetailsViewController: UIViewController {
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonPosition: UILabel!
     @IBOutlet weak var pokemonType: UILabel!
-    @IBOutlet weak var pokemonImage: UIImageView!
+    @IBOutlet weak var pokemonImg: UIImageView!
     
     @IBOutlet weak var species: UILabel!
     @IBOutlet weak var height: UILabel!
@@ -32,8 +32,31 @@ class PokemonDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        pokemonType.layer.cornerRadius = 20;
-    }
+        PokedexApiHelper.shared.getOnePokemonByName(pokeName: "bulbasaur") { (datas, error) in
+            for data in datas {
+                DispatchQueue.main.async {
+                    
+                    self.pokemonName.text = data.pokemon.name!
+                    self.pokemonPosition.text = "#\(data.pokemon.id!)"
+                    self.pokemonType.text = "\(data.pokemon.types!)"
+                
+
+                    let imgUrl = URL(string: (data.pokemon.sprites?.frontDefault)!)!
+                    self.pokemonImg.load(url: imgUrl)
+                    
+                   
+                    self.height.text = "\(data.pokemon.height!)";
+                    self.weight.text = "\(data.pokemon.weight!)";
+                    
+                    
+                    
+                }
+            }
+        }
+        
+        
+        
+}
     
 
     /*
