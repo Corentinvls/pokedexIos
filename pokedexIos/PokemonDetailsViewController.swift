@@ -19,7 +19,6 @@ class PokemonDetailsViewController: UIViewController {
     @IBOutlet weak var species: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
-    @IBOutlet weak var abilities: UILabel!
     
     
     @IBOutlet weak var hpStat: UILabel!
@@ -32,7 +31,7 @@ class PokemonDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Do any additional setup after loading the view.
         pokemonName.text = pokemon["name"] as! String
         let position = pokemon["id"] as AnyObject
