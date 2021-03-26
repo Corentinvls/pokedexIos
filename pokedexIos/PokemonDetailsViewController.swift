@@ -33,8 +33,6 @@ class PokemonDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(pokemon["stats"])
-        
         // Do any additional setup after loading the view.
         pokemonName.text = pokemon["name"] as! String
         let position = pokemon["id"] as AnyObject
@@ -63,8 +61,38 @@ class PokemonDetailsViewController: UIViewController {
             //print(abilities["ability"].["name"])
         //}
         
-        let stats = pokemon["stats"] as? AnyObject
+        let stats = pokemon["stats"] as? [AnyObject]
+        let statHp = stats![0]
         
+        let hp = statHp["base_stat"]!
+        hpStat.text = "\(hp!)"
+        
+        let statAttack = stats![1]
+        let attack = statAttack["base_stat"]!
+        
+        atkStat.text = "\(attack!)"
+        
+        let statdefense = stats![2]
+        let defense = statdefense["base_stat"]!
+        
+        defStat.text = "\(defense!)"
+        
+        let statSPAttack = stats![3]
+        let spAtk = statSPAttack["base_stat"]!
+        
+        spAtkStat.text = "\(spAtk!)"
+        
+        let statSPDefense = stats![4]
+        let spDefense = statSPDefense["base_stat"]!
+        
+        spDefStat.text = "\(spDefense!)"
+        
+        let statSpeed = stats![5]
+        let spSpeed = statSpeed["base_stat"]!
+        
+        speedStat.text = "\(spSpeed!)"
+        
+        self.pokemonImage.imageFromUrl(urlString: sprites!["front_default"] as! String)
     }
     
     func setFontAndSize()
@@ -82,6 +110,8 @@ class PokemonDetailsViewController: UIViewController {
         
         self.weight.font = UIFont(name: "Futura", size: self.species.font.pointSize)
         
+        /*
+        
         self.malePercentage.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
         
         self.femalePercentage.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
@@ -89,6 +119,7 @@ class PokemonDetailsViewController: UIViewController {
         self.eggGroups.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
         
         self.eggCycle.font = UIFont(name: "Futura", size: self.abilities.font.pointSize)
+        */
     }
     
 

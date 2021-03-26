@@ -7,6 +7,8 @@
 
 
 import UIKit
+import Alamofire
+
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
@@ -17,6 +19,18 @@ extension UIImageView {
             
                     }
                 }
+            }
+        }
+    }
+}
+
+extension UIImageView {
+     func imageFromUrl(urlString: String) {
+        if let url = URL(string: urlString) {
+            let request = NSURLRequest(url: url)
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) {
+                (response: URLResponse!, data: Data!, error: Error!) -> Void in
+                self.image = UIImage(data: data)
             }
         }
     }
